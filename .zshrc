@@ -23,6 +23,8 @@ export ZSH="/home/robman/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME=powerlevel10k/powerlevel10k
+source /home/robman/.zsh/.zsh-theme-gruvbox-material-dark
+PURE_POWER_MODE=modern
 # Completion for kitty
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
