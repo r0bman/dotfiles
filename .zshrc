@@ -24,20 +24,10 @@ export ZSH="/home/robman/.oh-my-zsh"
 #POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME=powerlevel10k/powerlevel10k
 source /home/robman/.zsh/.zsh-theme-gruvbox-material-dark
-PURE_POWER_MODE=modern
-# Completion for kitty
+
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
-
-#ZSH_THEME="agnoster"
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,6 +86,7 @@ plugins=(
   minikube
   tmux
   tmux-cssh
+  ubuntu
   ufw
 )
 
