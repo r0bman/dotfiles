@@ -7,19 +7,10 @@ call vundle#begin()
 
 " Bundles
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'sjl/gundo.vim'
-"Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lifepillar/vim-gruvbox8'
 Plugin 'vimwiki/vimwiki'
-"Plugin 'morhetz/gruvbox'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'TomNomNom/xoria256.vim'
-"Plugin 'fatih/vim-go'
-"Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 
@@ -38,7 +29,7 @@ set encoding=utf-8
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme='powerlineish'
+let g:airline#extensions#branch#enabled = 1
 let g:airline_theme='base16_gruvbox_dark_hard'
 
 " History
@@ -52,6 +43,7 @@ set modeline
 set ruler
 set title
 set nu
+set cursorline
 
 " Line wrapping
 set nowrap
@@ -93,8 +85,19 @@ map 8 <Esc>:tabe
 map 9 gT
 map 0 gt
 
-" Gundo toggle
-map <F5> <Esc>:GundoToggle<CR>
+"" Split
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
+
+"" Buffer nav
+noremap <leader>z :bp<CR>
+noremap <leader>x :bn<CR>
+
+"" Close buffer
+noremap <leader>c :bd<CR>
+
+" Paste toggle
+map <F3> <Esc>:set paste!<CR>
 
 " Toggle line-wrap
 map <F6> <Esc>:set wrap!<CR>
@@ -122,6 +125,12 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
+
+" session management
+nnoremap <leader>so :OpenSession<Space>
+nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
