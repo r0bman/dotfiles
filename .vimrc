@@ -11,6 +11,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lifepillar/vim-gruvbox8'
 Plugin 'vimwiki/vimwiki'
+Plugin 'liuchengxu/vim-clap'
 
 call vundle#end()
 
@@ -30,6 +31,7 @@ set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
 let g:airline_theme='base16_gruvbox_dark_hard'
 
 " History
@@ -44,6 +46,7 @@ set ruler
 set title
 set nu
 set cursorline
+set relativenumber
 
 " Line wrapping
 set nowrap
@@ -125,12 +128,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
-
-" session management
-nnoremap <leader>so :OpenSession<Space>
-nnoremap <leader>ss :SaveSession<Space>
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
