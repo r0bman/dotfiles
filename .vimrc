@@ -11,7 +11,6 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lifepillar/vim-gruvbox8'
 Plugin 'vimwiki/vimwiki'
-Plugin 'liuchengxu/vim-clap'
 
 call vundle#end()
 
@@ -141,7 +140,7 @@ vnoremap K :m '<-2<CR>gv=gv
 nmap <Leader>b :!echo <C-R><C-W> \| base64 -d<CR>
 
 " grep recursively for word under cursor
-nmap <Leader>g :tabnew\|read !grep -Hnr '<C-R><C-W>'<CR>
+nmap <Leader>g :tabnew\|read !fgrep -Hnr '<C-R><C-W>'<CR>
 
 " sort the buffer removing duplicates
 nmap <Leader>s :%!sort -u --version-sort<CR>
